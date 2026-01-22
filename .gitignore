@@ -1,0 +1,47 @@
+# =========================
+# Node / Express
+# =========================
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+
+# =========================
+# Angular
+# =========================
+dist/
+.angular/
+.cache/
+out-tsc/
+tmp/
+
+# Angular local config
+.angular/cache/
+.sass-cache/
+
+# =========================
+# IDE / OS files
+# =========================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Coverage
+# =========================
+coverage/
+
+# =========================
+# Optional
+# =========================
+*.local
