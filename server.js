@@ -7,7 +7,16 @@ const bcrypt=require("bcrypt");
 
 const app=express();
 const PORT=process.env.PORT || 5000;
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:4200',
+    'https://kanker-tourism-frontend.vercel.app',
+    'https://kanker-tourism-frontend-b4mt8pmrq-rohit-aswals-projects.vercel.app'
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
 app.use("/api/auth",require("./routes/auth"));
 app.use("/api/admin",require("./routes/admin"));
